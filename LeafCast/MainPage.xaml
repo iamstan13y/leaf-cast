@@ -1,0 +1,22 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:LeafCast"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             mc:Ignorable="d"
+             x:Class="LeafCast.Landing_Page">
+
+    <StackLayout>
+        <Rectangle RadiusX="20" RadiusY="20" Margin="78,672,0,0" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="194" HeightRequest="60">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#415041" />
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Label Text="GET STARTED" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="71,688,0,0" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="206" HeightRequest="38"/>
+
+        <!-- Add other controls accordingly -->
+
+    </StackLayout>
+</ContentPage>
