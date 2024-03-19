@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:LeafCast"
              BackgroundColor="{DynamicResource PageBackgroundColor}"
              mc:Ignorable="d"
-             x:Class="LeafCast.Landing_Page">
+             x:Class="LeafCast.MainPage">
 
     <StackLayout>
         <Rectangle RadiusX="20" RadiusY="20" Margin="78,672,0,0" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="194" HeightRequest="60">
@@ -16,7 +16,7 @@
 
         <Label Text="GET STARTED" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="71,688,0,0" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="206" HeightRequest="38"/>
 
-        <!-- Add other controls accordingly -->
+      
 
     </StackLayout>
 </ContentPage>
