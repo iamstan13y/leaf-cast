@@ -8,6 +8,6 @@
     Title="LeafCast">
 
     <ShellContent
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage"/>
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage"/>
 </Shell>
