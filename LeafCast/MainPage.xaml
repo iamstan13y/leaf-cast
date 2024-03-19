@@ -1,22 +1,33 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:LeafCast"
-             BackgroundColor="{DynamicResource PageBackgroundColor}"
-             mc:Ignorable="d"
-             x:Class="LeafCast.MainPage">
+             x:Class="LeafCast.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#415041">
 
-    <StackLayout>
-        <Rectangle RadiusX="20" RadiusY="20" Margin="78,672,0,0" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="194" HeightRequest="60">
-            <Rectangle.Fill>
-                <SolidColorBrush Color="#415041" />
-            </Rectangle.Fill>
-        </Rectangle>
+    <Grid BackgroundColor="#415041">
+        <Frame IsVisible="true" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="270" HasShadow="False" BorderColor="Transparent">
+            <StackLayout>
+                <Grid>
+                    <Image Source="leafcast.png" Aspect="AspectFit" />
+                    <Label Text="LOGIN TO YOUR ACCOUNT" TextColor="White" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontSize="31" FontFamily="PlusJarkataSansBold"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
 
-        <Label Text="GET STARTED" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="71,688,0,0" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="206" HeightRequest="38"/>
+        <Frame IsVisible="true" BackgroundColor="#CFC9B1" CornerRadius="50" VerticalOptions="End"  HeightRequest="580" HasShadow="False" BorderColor="Transparent">
+            <StackLayout Padding="40">
+                <Entry Placeholder="Username" Margin="0,20,0,0" FontSize="18"/>
 
-      
+                <Entry Placeholder="Password" IsPassword="True" Margin="0,20,0,0" FontSize="18"/>
 
-    </StackLayout>
+                <Button Text="Sign In" Margin="0,60,0,0" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
+
+                <Label Text="Forgot Password?" TextColor="Blue" HorizontalOptions="Center" Margin="0,10,0,0" FontSize="15"/>
+
+                <Label Text="New User? Sign Up" TextColor="Blue" HorizontalOptions="Center" Margin="0,30,0,0" FontSize="15"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+
 </ContentPage>
