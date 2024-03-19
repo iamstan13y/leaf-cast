@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeafCast.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#415041">
+
+    <Grid BackgroundColor="#415041">
+        <Frame IsVisible="true" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="270" HasShadow="False" BorderColor="Transparent">
+            <StackLayout>
+                <Grid>
+                    <Image Source="leafcast.png" Aspect="AspectFit" />
+                    <Label Text="LOGIN TO YOUR ACCOUNT" TextColor="White" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontSize="31" FontFamily="PlusJarkataSansBold"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+
+        <Frame IsVisible="true" BackgroundColor="#CFC9B1" CornerRadius="50" VerticalOptions="End"  HeightRequest="580" HasShadow="False" BorderColor="Transparent">
+            <StackLayout Padding="40">
+                <Entry Placeholder="Username" Margin="0,20,0,0" FontSize="18"/>
+
+                <Entry Placeholder="Password" IsPassword="True" Margin="0,20,0,0" FontSize="18"/>
+
+                <Button Text="Sign In" Margin="0,60,0,0" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
+
+                <Label Text="Forgot Password?" TextColor="Blue" HorizontalOptions="Center" Margin="0,10,0,0" FontSize="15"/>
+
+                <Label Text="New User? Sign Up" TextColor="Blue" HorizontalOptions="Center" Margin="0,30,0,0" FontSize="15"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+
+</ContentPage>
