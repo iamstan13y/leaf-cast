@@ -10,7 +10,7 @@ public partial class SplashScreen : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        await Task.Delay(TimeSpan.FromSeconds(2));
+        await Task.Delay(TimeSpan.FromSeconds(3));
         await Navigation.PushAsync(new LoginPage());
     }
 }
