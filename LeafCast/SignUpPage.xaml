@@ -17,14 +17,20 @@
 
         <Frame IsVisible="true" BackgroundColor="#CFC9B1" CornerRadius="50" VerticalOptions="End"  HeightRequest="580" HasShadow="False" BorderColor="Transparent">
             <StackLayout Padding="40">
-                <Entry Placeholder="Email" Margin="0,20,0,0" FontSize="18"/>
-                
-                <Entry Placeholder="Username" Margin="0,20,0,0" FontSize="18"/>
+                <Entry Placeholder="Email" Margin="0,20,0,0"/>
 
-                <Entry Placeholder="Password" IsPassword="True" Margin="0,20,0,0" FontSize="18"/>
+                <Entry Placeholder="Username" Margin="0,20,0,0"/>
 
-                <Entry Placeholder="Confirm Password" IsPassword="True" Margin="0,20,0,0" FontSize="18"/>
-                
+                <Entry Placeholder="Password" IsPassword="True" Margin="0,20,0,0"/>
+
+                <Entry Placeholder="Confirm Password" IsPassword="True" Margin="0,20,0,0"/>
+
+                <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
+                    <RadioButton x:Name="farmerRadioButton" Content="Farmer"/>
+
+                    <RadioButton x:Name="buyerRadioButton" Content="Buyer"/>
+                </StackLayout>
+
                 <Button Text="Sign Up" Margin="0,60,0,0" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
 
                 <Label x:Name="loginLabel" Text="Already have an account? Login Here" TextColor="Blue" HorizontalOptions="Center" Margin="0,30,0,0" FontSize="15"/>
