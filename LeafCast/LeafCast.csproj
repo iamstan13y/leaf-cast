@@ -59,6 +59,7 @@
 	  <None Remove="Resources\Fonts\PlusJakartaSans-Bold.ttf" />
 	  <None Remove="Resources\Images\leafcast.png" />
 	  <None Remove="Resources\Images\leafcastlogo.png" />
+	  <None Remove="Resources\Images\user.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -84,6 +85,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="AppShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="DashboardPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="LoginPage.xaml">
