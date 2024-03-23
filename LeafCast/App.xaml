@@ -9,6 +9,18 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="#415041" />
+                <Setter Property="PlaceholderColor" Value="#808080" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style TargetType="RadioButton">
+                <Setter Property="TextColor" Value="#415041" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
