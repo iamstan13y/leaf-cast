@@ -40,10 +40,4 @@
 
     </Grid>
 
-    <Tab>
-        <TabBarItem IconImageSource="home_icon.png" Text="Home" Command="{Binding NavigateToHomeCommand}" />
-        <TabBarItem IconImageSource="profile_icon.png" Text="Profile" Command="{Binding NavigateToProfileCommand}" />
-        <!-- Add more TabItems for additional pages -->
-    </Tab>
-
 </ContentPage>
