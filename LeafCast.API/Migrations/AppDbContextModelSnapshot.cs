@@ -21,6 +21,30 @@ namespace LeafCast.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("LeafCast.API.Models.Data.Prediction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("TobaccoGradeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TobaccoGradeId");
+
+                    b.ToTable("Predictions");
+                });
+
             modelBuilder.Entity("LeafCast.API.Models.Data.TobaccoGrade", b =>
                 {
                     b.Property<int>("Id")
@@ -35,6 +59,17 @@ namespace LeafCast.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TobaccoGrades");
+                });
+
+            modelBuilder.Entity("LeafCast.API.Models.Data.Prediction", b =>
+                {
+                    b.HasOne("LeafCast.API.Models.Data.TobaccoGrade", "TobaccoGrade")
+                        .WithMany()
+                        .HasForeignKey("TobaccoGradeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TobaccoGrade");
                 });
 #pragma warning restore 612, 618
         }
