@@ -1,8 +1,9 @@
 ﻿using LeafCast.API.Models.Data;
+using LeafCast.API.Models.Local;
 
 namespace LeafCast.API.Models.Repository;
 
 public interface ITobaccoGradeRepository
 {
-    Task<bool> AddRangeAsync(List<TobaccoGrade> tobaccoGrades);
+    Task<Result<bool>> AddRangeAsync(List<TobaccoGrade> tobaccoGrades);
 }
