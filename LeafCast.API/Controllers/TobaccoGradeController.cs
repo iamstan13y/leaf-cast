@@ -9,6 +9,6 @@ public class TobaccoGradeController(ITobaccoGradeRepository repository) : Contro
 {
     private readonly ITobaccoGradeRepository _repository = repository;
 
-    [HttpGet]
-    public async Task<IActionResult> Get() => Ok(await _repository.AddRangeAsync)
+    [HttpPost("bulk")]
+    public async Task<IActionResult> Get() => Ok
 }
