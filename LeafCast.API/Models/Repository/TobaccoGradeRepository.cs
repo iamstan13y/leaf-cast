@@ -1,4 +1,5 @@
 ﻿using LeafCast.API.Models.Data;
+using LeafCast.API.Models.Local;
 
 namespace LeafCast.API.Models.Repository;
 
@@ -6,12 +7,12 @@ public class TobaccoGradeRepository(AppDbContext context) : ITobaccoGradeReposit
 {
     private readonly AppDbContext _context = context;
 
-    public async Task<bool> AddRangeAsync(List<TobaccoGrade> tobaccoGrades)
+    public async Task<Result<bool>> AddRangeAsync(List<TobaccoGrade> tobaccoGrades)
     {
 
         await _context.TobaccoGrades!.AddRangeAsync(tobaccoGrades);
         await _context.SaveChangesAsync();
 
-        return true;
+        return new Result<bool>(true, "Data saved successfully!");
     }
 }
