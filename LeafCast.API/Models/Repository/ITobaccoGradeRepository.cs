@@ -5,5 +5,5 @@ namespace LeafCast.API.Models.Repository;
 
 public interface ITobaccoGradeRepository
 {
-    Task<Result<bool>> AddRangeAsync(List<TobaccoGrade> tobaccoGrades);
+    Task<Result<bool>> AddBulkAsync(List<GradeRequest> tobaccoGrades);
 }
