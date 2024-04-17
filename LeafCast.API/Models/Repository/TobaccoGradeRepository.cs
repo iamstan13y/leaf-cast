@@ -7,7 +7,7 @@ public class TobaccoGradeRepository(AppDbContext context) : ITobaccoGradeReposit
 {
     private readonly AppDbContext _context = context;
 
-    public async Task<Result<bool>> AddRangeAsync(List<TobaccoGrade> tobaccoGrades)
+    public async Task<Result<bool>> AddBulkAsync(List<GradeRequest> tobaccoGrades)
     {
 
         await _context.TobaccoGrades!.AddRangeAsync(tobaccoGrades);
