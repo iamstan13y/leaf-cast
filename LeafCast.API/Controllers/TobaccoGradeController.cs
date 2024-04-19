@@ -10,6 +10,18 @@ public class TobaccoGradeController(ITobaccoGradeRepository repository) : Contro
 {
     private readonly ITobaccoGradeRepository _repository = repository;
 
+    [HttpGet]
+    public async Task<IActionResult> Get() => Ok(await _repository.GetAllAsync());
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var result = await _repository.GetByIdAsync(id);
+        if (!result.Success) return NotFound(result);
+
+        return Ok(result);
+    }
+
     [HttpPost("bulk")]
     public async Task<IActionResult> Post(List<GradeRequest> request)
     {
