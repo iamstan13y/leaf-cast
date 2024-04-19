@@ -9,8 +9,14 @@ public class TobaccoGradeRepository(AppDbContext context) : ITobaccoGradeReposit
 
     public async Task<Result<bool>> AddBulkAsync(List<GradeRequest> tobaccoGrades)
     {
+        tobaccoGrades.ForEach(async grade =>
+        {
+            await _context.TobaccoGrades!.AddAsync(new TobaccoGrade
+            {
+                Name = grade.Name
+            });
+        });
 
-        await _context.TobaccoGrades!.AddRangeAsync(tobaccoGrades);
         await _context.SaveChangesAsync();
 
         return new Result<bool>(true, "Data saved successfully!");
