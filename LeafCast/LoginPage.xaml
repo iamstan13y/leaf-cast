@@ -5,15 +5,15 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#415041">
 
-    <Grid BackgroundColor="#415041">
-        <Frame IsVisible="true" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="270" HasShadow="False" BorderColor="Transparent">
-            <StackLayout>
-                <Grid>
-                    <Image Source="leafcast.png" Aspect="AspectFit" />
-                    <Label Text="LOGIN TO YOUR ACCOUNT" TextColor="White" VerticalTextAlignment="Center" HorizontalOptions="Center" FontSize="31" FontFamily="PlusJarkataSansBold"/>
-                </Grid>
-            </StackLayout>
-        </Frame>
+    <Grid BackgroundColor="Transparent">
+       <Frame IsVisible="true" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="270" HasShadow="False" BorderColor="Transparent" Margin="0,0,0,0">
+        <StackLayout>
+            <Grid>
+                    <Image Source="leafcast.png" Aspect="AspectFit" Margin="0,-20,0,0"/>
+                    <Label Text="LOGIN TO YOUR ACCOUNT" TextColor="White" VerticalTextAlignment="Start" HorizontalOptions="Center" FontSize="31" FontFamily="PlusJarkataSansBold" Margin="0,100,0,0"/>
+            </Grid>
+        </StackLayout>
+    </Frame>
 
         <Frame IsVisible="true" BackgroundColor="#CFC9B1" CornerRadius="50" VerticalOptions="End"  HeightRequest="580" HasShadow="False" BorderColor="Transparent">
             <StackLayout Padding="40">
