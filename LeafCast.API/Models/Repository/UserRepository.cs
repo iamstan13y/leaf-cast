@@ -1,11 +1,9 @@
-﻿using LeafCast.API.Models;
-using LeafCast.API.Models.Data;
+﻿using LeafCast.API.Models.Data;
 using LeafCast.API.Models.Local;
-using LeafCast.API.Models.Repository;
 using LeafCast.API.Services;
 using Microsoft.EntityFrameworkCore;
 
-namespace VEF.API.Models.Repository;
+namespace LeafCast.API.Models.Repository;
 
 public class UserRepository
     (AppDbContext context,
