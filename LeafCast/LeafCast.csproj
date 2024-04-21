@@ -59,6 +59,10 @@
 	  <None Remove="Resources\Fonts\PlusJakartaSans-Bold.ttf" />
 	  <None Remove="Resources\Images\leafcast.png" />
 	  <None Remove="Resources\Images\leafcastlogo.png" />
+	  <None Remove="Resources\Images\nav_1.png" />
+	  <None Remove="Resources\Images\nav_2.png" />
+	  <None Remove="Resources\Images\nav_3.png" />
+	  <None Remove="Resources\Images\nav_4.png" />
 	  <None Remove="Resources\Images\user.png" />
 	</ItemGroup>
 
@@ -91,6 +95,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="NavBar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="SignUpPage.xaml">
