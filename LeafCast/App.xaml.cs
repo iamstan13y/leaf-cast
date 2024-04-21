@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new SplashScreenPage());
+            MainPage = new NavigationPage(new DashboardPage());
         }
     }
 }
