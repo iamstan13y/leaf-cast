@@ -7,4 +7,6 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 {
     public DbSet<TobaccoGrade>? TobaccoGrades { get; set; }
     public DbSet<Prediction>? Predictions { get; set; }
+    public DbSet<User>? Users { get; set; }
+    public DbSet<OtpCode>? OtpCodes { get; set; }
 }
