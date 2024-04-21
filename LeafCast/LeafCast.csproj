@@ -73,6 +73,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ProfileSettingsPage.xaml.cs">
+	    <DependentUpon>ProfileSettingsPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="PredictionsPage.xaml.cs">
 	    <DependentUpon>PredictionsPage.xaml</DependentUpon>
 	  </Compile>
@@ -92,6 +95,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="AppShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ProfileSettingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="PredictionsPage.xaml">
