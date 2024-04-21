@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new PredictionsPage());
+            MainPage = new NavigationPage(new ProfileSettingsPage());
         }
     }
 }
