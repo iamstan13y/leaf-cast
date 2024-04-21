@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LeafCast"
              x:Class="LeafCast.DashboardPage"
              NavigationPage.HasNavigationBar="False"
              Title="DashboardPage">
@@ -18,31 +19,7 @@
 
 
         <Frame IsVisible="true" BackgroundColor="#D9D9D9" CornerRadius="50" VerticalOptions="End"  HeightRequest="600" HasShadow="False" BorderColor="Transparent">
-
-            <Frame IsVisible="true" BackgroundColor="#415041" CornerRadius="50" VerticalOptions="End"  HeightRequest="60" HasShadow="False" BorderColor="Transparent">
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    <!-- Home Icon -->
-                    <Image Source="home.png" Margin="0,5,0,0" WidthRequest="30" HeightRequest="30">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnHomeIconTapped" />
-                        </Image.GestureRecognizers>
-                    </Image>
-
-                    <!-- Profile Icon -->
-                    <Image Source="profile.png" Margin="0,5,0,0" WidthRequest="30" HeightRequest="30">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnProfileIconTapped" />
-                        </Image.GestureRecognizers>
-                    </Image>
-
-                    <!-- Stats Icon -->
-                    <Image Source="stats.png" Margin="0,5,0,0" WidthRequest="30" HeightRequest="30">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnStatsIconTapped" />
-                        </Image.GestureRecognizers>
-                    </Image>
-                </StackLayout>
-            </Frame>
+            <local:NavBar />
         </Frame>
 
     </Grid>
