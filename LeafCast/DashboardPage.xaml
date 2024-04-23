@@ -18,9 +18,30 @@
         </Frame>
 
 
-        <Frame IsVisible="true" BackgroundColor="#D9D9D9" CornerRadius="50" VerticalOptions="End"  HeightRequest="600" HasShadow="False" BorderColor="Transparent">
-            <local:NavBar />
+        <Frame IsVisible="true" BackgroundColor="#D9D9D9" CornerRadius="50" VerticalOptions="End" HeightRequest="600" HasShadow="False" BorderColor="Transparent">
+            <ScrollView>
+                <StackLayout Orientation="Horizontal" HeightRequest="100" WidthRequest="300" Margin="0,0,0,400">
+                    <!-- First Card -->
+                    <Frame BackgroundColor="#FCDC5C" CornerRadius="20" Margin="0,0,20,0" WidthRequest="145" BorderColor="Transparent">
+                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Label Text="$4.00" HorizontalOptions="Center" TextColor="Black" FontSize="30"/>
+                            <Label Text="Previous Season Price" HorizontalOptions="Center" TextColor="Black" FontSize="Small"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Second Card -->
+                    <Frame BackgroundColor="#E3B080" CornerRadius="20" Margin="0,0,0,0" WidthRequest="130" BorderColor="Transparent">
+                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Label Text="$4.30" HorizontalOptions="Center" TextColor="Black" FontSize="30"/>
+                            <Label Text="Predicted Price" HorizontalOptions="Center" TextColor="Black" FontSize="Small"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
         </Frame>
+
+
+        <local:NavBar />
 
     </Grid>
 
