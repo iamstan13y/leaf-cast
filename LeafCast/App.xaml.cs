@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ProfileSettingsPage());
+            MainPage = new NavigationPage(new DashboardPage());
         }
     }
 }
