@@ -48,7 +48,10 @@ namespace LeafCast.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal>("Price")
+                    b.Property<decimal>("ActualPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("PredictedPrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("TobaccoGradeId")
