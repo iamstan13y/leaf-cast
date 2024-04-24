@@ -8,7 +8,7 @@ public class PredictionRepository(AppDbContext context) : IPredictionRepository
 {
     private readonly AppDbContext _context = context;
 
-    public async Task<bool> AddBulkAsync(List<PredictionRequest> predictions)
+    public async Task<Result<bool>> AddBulkAsync(List<PredictionRequest> predictions)
     {
         predictions.ForEach(async prediction =>
         {
@@ -16,13 +16,14 @@ public class PredictionRepository(AppDbContext context) : IPredictionRepository
             {
                 TobaccoGradeId = prediction.TobaccoGradeId,
                 Year = prediction.Year,
-                Price = prediction.Price
+                ActualPrice = prediction.ActualPrice,
+                PredictedPrice = prediction.PredictedPrice,
             });
         });
 
         await context.SaveChangesAsync();
 
-        return true;
+        return new Result<bool>(true);
     }
 
     public async Task<Result<IEnumerable<Prediction>>> GetAllAsync() =>
