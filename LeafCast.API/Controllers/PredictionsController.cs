@@ -21,4 +21,7 @@ public class PredictionsController(IPredictionRepository repository) : Controlle
 
         return Ok(result);
     }
+
+    [HttpGet("top-grades")]
+    public async Task<IActionResult> GetTopGrades() => Ok(await _repository.GetTopGradesAsync());
 }
