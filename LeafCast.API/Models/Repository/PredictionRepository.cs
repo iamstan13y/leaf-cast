@@ -28,4 +28,26 @@ public class PredictionRepository(AppDbContext context) : IPredictionRepository
 
     public async Task<Result<IEnumerable<Prediction>>> GetAllAsync() =>
         new Result<IEnumerable<Prediction>>(await _context.Predictions!.Include(x => x.TobaccoGrade).ToListAsync());
+
+    public async Task<Result<Dictionary<string, decimal>>> GetTopGradesAsync()
+    {
+        var grades = await _context.Predictions!.Where(x => x.Year == DateTime.Now.AddYears(-1).Year)
+            .GroupBy(x => x.TobaccoGrade.Name)
+            .Select(x => new
+            {
+                Grade = x.Key,
+                TotalPrice = x.Sum(x => x.ActualPrice)
+            })
+            .OrderByDescending(x => x.TotalPrice)
+            .Take(5)
+            .ToListAsync();
+
+        var total = grades.Sum(x => x.TotalPrice);
+
+        var gradesWithPercentage = grades.ToDictionary(x => x.Grade, x => Math.Round((x.TotalPrice / total) * 100, 2));
+
+        return new Result<Dictionary<string, decimal>>(gradesWithPercentage);
+    }
+
+
 }
