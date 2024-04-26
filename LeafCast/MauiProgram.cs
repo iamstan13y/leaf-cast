@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using LeafCast.Services;
+using Microsoft.Extensions.Logging;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace LeafCast
 {
@@ -9,6 +11,7 @@ namespace LeafCast
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseSkiaSharp(true)
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -16,8 +19,14 @@ namespace LeafCast
                     fonts.AddFont("PlusJakartaSans-Bold.ttf", "PlusJarkataSansBold");
                 });
 
+            builder.Services.AddHttpClient<IHttpService, HttpService>((sp, client) =>
+            {
+                client.BaseAddress = new Uri("https://leafcast-api.onrender.com");
+            });
+
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
