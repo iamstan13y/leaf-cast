@@ -22,7 +22,7 @@
 
                 <lvc:PieChart Series="{Binding Series}" InitialRotation="-30" WidthRequest="400"  Margin="0,-450,0,0"/>
 
-                <Label Text="Annual Tobacco Market Trends(Exports &amp; Imports)" HorizontalOptions="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="0,960,0,0"/>
+                <Label Text="Annual Tobacco Market Trends(Exports &amp; Imports)" HorizontalOptions="Center" TextColor="Black" FontSize="16" FontAttributes="Bold" Margin="0,960,0,0"/>
                 <!--<lvc:CartesianChart
         Series="{Binding XSeries}"
         XAxes="{Binding YAxes}"
