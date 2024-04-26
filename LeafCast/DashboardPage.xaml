@@ -2,47 +2,56 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:LeafCast"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             xmlns:vms="clr-namespace:LeafCast.ViewModels;assembly=LeafCast"
              x:Class="LeafCast.DashboardPage"
              NavigationPage.HasNavigationBar="False"
              Title="DashboardPage">
 
+    <ContentPage.BindingContext>
+        <vms:TopGradesViewModel/>
+    </ContentPage.BindingContext>
+
     <Grid BackgroundColor="#415041">
-        <Frame IsVisible="true" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="270" HasShadow="False" BorderColor="Transparent">
-            <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
-                <!-- User Icon -->
-                <Image Source="user.png" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="20,40,0,0" WidthRequest="120"/>
+        <StackLayout>
+                <Frame IsVisible="true" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="220" HasShadow="False" BorderColor="Transparent">
+                    <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
+                        <!-- User Icon -->
+                        <Image Source="user.png" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="20,40,0,0" WidthRequest="120"/>
 
-                <!-- User Name -->
-                <Label Text="John Doe" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="0,70,0,0" FontSize="30" />
+                        <!-- User Name -->
+                        <Label Text="John Doe" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="0,70,0,0" FontSize="30" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame IsVisible="true" BackgroundColor="#D9D9D9" CornerRadius="50" VerticalOptions="End" HeightRequest="600" HasShadow="False" BorderColor="Transparent">
+                    <StackLayout Orientation="Horizontal" HeightRequest="100" WidthRequest="300" Margin="0,0,0,450">
+                        <!-- First Card -->
+                        <Frame BackgroundColor="#FCDC5C" CornerRadius="20" Margin="0,0,20,0" WidthRequest="145" BorderColor="Transparent">
+                            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                <Label Text="$4.00" HorizontalOptions="Center" TextColor="Black" FontSize="30"/>
+                                <Label Text="Previous Season Price" HorizontalOptions="Center" TextColor="Black" FontSize="Small"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <!-- Second Card -->
+                        <Frame BackgroundColor="#E3B080" CornerRadius="20" Margin="0,0,0,0" WidthRequest="130" BorderColor="Transparent">
+                            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                <Label Text="$4.30" HorizontalOptions="Center" TextColor="Black" FontSize="30"/>
+                                <Label Text="Predicted Price" HorizontalOptions="Center" TextColor="Black" FontSize="Small"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
             </StackLayout>
-        </Frame>
+        <Label Text="Previous Season Top 5 Grades" HorizontalOptions="Center" TextColor="Black" FontSize="18" Margin="0,380,0,0"/>
 
-
-        <Frame IsVisible="true" BackgroundColor="#D9D9D9" CornerRadius="50" VerticalOptions="End" HeightRequest="600" HasShadow="False" BorderColor="Transparent">
-            <ScrollView>
-                <StackLayout Orientation="Horizontal" HeightRequest="100" WidthRequest="300" Margin="0,0,0,400">
-                    <!-- First Card -->
-                    <Frame BackgroundColor="#FCDC5C" CornerRadius="20" Margin="0,0,20,0" WidthRequest="145" BorderColor="Transparent">
-                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                            <Label Text="$4.00" HorizontalOptions="Center" TextColor="Black" FontSize="30"/>
-                            <Label Text="Previous Season Price" HorizontalOptions="Center" TextColor="Black" FontSize="Small"/>
-                        </StackLayout>
-                    </Frame>
-
-                    <!-- Second Card -->
-                    <Frame BackgroundColor="#E3B080" CornerRadius="20" Margin="0,0,0,0" WidthRequest="130" BorderColor="Transparent">
-                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                            <Label Text="$4.30" HorizontalOptions="Center" TextColor="Black" FontSize="30"/>
-                            <Label Text="Predicted Price" HorizontalOptions="Center" TextColor="Black" FontSize="Small"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </ScrollView>
-        </Frame>
-
-
+        <lvc:PieChart Series="{Binding Series}" InitialRotation="-30" WidthRequest="400"  Margin="0,200,0,0"/>
+        <StackLayout>
+            <Button x:Name="viewMoreButton" Text="View More..." Margin="0,690,0,0" WidthRequest="150" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
+        </StackLayout>
         <local:NavBar />
-
     </Grid>
 
 </ContentPage>
