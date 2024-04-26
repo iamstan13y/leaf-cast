@@ -1,6 +1,5 @@
 ﻿using LiveChartsCore;
 using CommunityToolkit.Mvvm.ComponentModel;
-using LiveChartsCore.SkiaSharpView.Extensions;
 using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.SkiaSharpView;
 using SkiaSharp;
@@ -25,6 +24,36 @@ public partial class TopGradesViewModel : ObservableObject
             LoadDataAsync();
         }
     }
+
+
+    public ISeries[] TrendSeries { get; set; } =
+    [
+        new ColumnSeries<double>
+        {
+            Name = "Exports (USD)",
+            Values = new double[] { 4720495.94, 3248698.67, 1461244.57, 9113863.2, 4798538.38}
+        },
+        new ColumnSeries<double>
+        {
+            Name = "Imports (USD)",
+            Values = new double[] { 8576220.92, 7295713.69, 2276123.69, 11127734.07, 8483738.46}
+        }
+    ];
+
+    public Axis[] XAxes { get; set; } =
+    [
+        new Axis
+        {
+            Labels = new string[] { "2019", "2020", "2021", "2022", "2023" },
+            LabelsRotation = 0,
+            SeparatorsPaint = new SolidColorPaint(new SKColor(200, 200, 200)),
+            SeparatorsAtCenter = false,
+            TicksPaint = new SolidColorPaint(new SKColor(35, 35, 35)),
+            TicksAtCenter = true,
+            ForceStepToMin = true,
+            MinStep = 10000000
+        }
+    ];
 
     public async Task LoadDataAsync()
     {
@@ -68,6 +97,11 @@ public partial class TopGradesViewModel : ObservableObject
                 return series;
             }).ToList();
         }
+    }
+
+    public async Task LoadMarketTrendsAsync()
+    {
+
     }
 
     public IEnumerable<ISeries> Series { get; set; }
