@@ -47,7 +47,8 @@ xmlns:vms="clr-namespace:LeafCast.ViewModels;assembly=LeafCast"
         TitleColor="#808080"
         WidthRequest="100"
         ItemsSource="{Binding Years}"
-        SelectedItem="{Binding SelectedYear}">
+        SelectedItem="{Binding SelectedYear}"
+                                SelectedIndexChanged="YearPicker_SelectedIndexChanged">
                         </Picker>
                     </StackLayout>
                 </Frame>

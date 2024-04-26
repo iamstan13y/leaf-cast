@@ -28,27 +28,51 @@ public partial class TopGradesViewModel : ObservableObject
         ];
 
         Years = [
-            "2024",
-            "2023",
-            "2022",
-            "2021",
-            "2020",
-            "2019"
+            2024,
+            2023,
+            2022,
+            2021,
+            2020,
+            2019
 
         ];
         SelectedGrade = Grades[0];
         Predictions =
     [
-        new Prediction { Id = 1, PredictedPrice = 2.09M, ActualPrice = 2.33M, Year = 2023 },
-        new Prediction { Id = 2, PredictedPrice = 3.15M, ActualPrice = 3.08M, Year = 2020 },
-        new Prediction { Id = 3, PredictedPrice = 4.27M, ActualPrice = 4.51M, Year = 2024 },
-        new Prediction { Id = 4, PredictedPrice = 1.82M, ActualPrice = 1.76M, Year = 2022 },
-        new Prediction { Id = 5, PredictedPrice = 5.39M, ActualPrice = 5.24M, Year = 2021 },
-        new Prediction { Id = 6, PredictedPrice = 2.54M, ActualPrice = 2.72M, Year = 2020 },
-        new Prediction { Id = 7, PredictedPrice = 4.81M, ActualPrice = 4.97M, Year = 2019 },
-        new Prediction { Id = 8, PredictedPrice = 1.93M, ActualPrice = 1.88M, Year = 2023 },
-        new Prediction { Id = 9, PredictedPrice = 3.62M, ActualPrice = 3.49M, Year = 2022 },
-        new Prediction { Id = 10, PredictedPrice = 5.05M, ActualPrice = 5.19M, Year = 2021 }
+         new Prediction { Id = "A1E", PredictedPrice = 2.09M, ActualPrice = 2.33M, Year = 2023 },
+        new Prediction { Id = "A1E", PredictedPrice = 2.31M, ActualPrice = 2.35M, Year = 2019 },
+        new Prediction { Id = "A1E", PredictedPrice = 2.13M, ActualPrice = 2.21M, Year = 2020 },
+        new Prediction { Id = "A1E", PredictedPrice = 2.25M, ActualPrice = 2.29M, Year = 2021 },
+        new Prediction { Id = "A1E", PredictedPrice = 2.18M, ActualPrice = 2.26M, Year = 2022 },
+        new Prediction { Id = "A1E", PredictedPrice = 2.27M, ActualPrice = 2.33M, Year = 2024 },
+
+        // ID: A1EA
+        new Prediction { Id = "A1EA", PredictedPrice = 3.15M, ActualPrice = 3.08M, Year = 2020 },
+        new Prediction { Id = "A1EA", PredictedPrice = 3.09M, ActualPrice = 3.12M, Year = 2019 },
+        new Prediction { Id = "A1EA", PredictedPrice = 3.18M, ActualPrice = 3.10M, Year = 2021 },
+        new Prediction { Id = "A1EA", PredictedPrice = 3.12M, ActualPrice = 3.07M, Year = 2022 },
+        new Prediction { Id = "A1EA", PredictedPrice = 3.21M, ActualPrice = 3.16M, Year = 2023 },
+        new Prediction { Id = "A1EA", PredictedPrice = 3.17M, ActualPrice = 3.09M, Year = 2024 },
+
+        // ID: B1
+        new Prediction { Id = "B1", PredictedPrice = 4.27M, ActualPrice = 4.51M, Year = 2024 },
+        new Prediction { Id = "B1", PredictedPrice = 4.34M, ActualPrice = 4.46M, Year = 2019 },
+        new Prediction { Id = "B1", PredictedPrice = 4.38M, ActualPrice = 4.45M, Year = 2020 },
+        new Prediction { Id = "B1", PredictedPrice = 4.41M, ActualPrice = 4.48M, Year = 2021 },
+        new Prediction { Id = "B1", PredictedPrice = 4.45M, ActualPrice = 4.55M, Year = 2022 },
+        new Prediction { Id = "B1", PredictedPrice = 4.50M, ActualPrice = 4.58M, Year = 2023 },
+
+        // ID: H4R
+        new Prediction { Id = "H4R", PredictedPrice = 1.82M, ActualPrice = 1.76M, Year = 2022 },
+        new Prediction { Id = "H4R", PredictedPrice = 1.79M, ActualPrice = 1.85M, Year = 2019 },
+        new Prediction { Id = "H4R", PredictedPrice = 1.86M, ActualPrice = 1.80M, Year = 2020 },
+        new Prediction { Id = "H4R", PredictedPrice = 1.90M, ActualPrice = 1.84M, Year = 2021 },
+        new Prediction { Id = "H4R", PredictedPrice = 1.88M, ActualPrice = 1.82M, Year = 2023 },
+        new Prediction { Id = "H4R", PredictedPrice = 1.83M, ActualPrice = 1.79M, Year = 2024 },
+
+        // ID: C2LV
+        new Prediction { Id = "C2LV", PredictedPrice = 5.39M, ActualPrice = 5.24M, Year = 2021 },
+        new Prediction { Id = "C2LV", PredictedPrice = 5.42M, ActualPrice = 5.31M, Year = 2019 },
     ];
         SelectedItem = Predictions[0];
     }
@@ -148,6 +172,8 @@ public partial class TopGradesViewModel : ObservableObject
     public Prediction SelectedItem { get; set; }
     public List<string> Grades { get; set; }
     public string SelectedGrade { get; set; }
-    public List<string> Years { get; set; }
-    public string SelectedYear { get; set; }
+    public List<int> Years { get; set; }
+    public int SelectedYear { get; set; }
+
+    
 }
