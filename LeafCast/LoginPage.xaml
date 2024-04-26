@@ -10,7 +10,7 @@
         <StackLayout>
             <Grid>
                     <Image Source="leafcast.png" Aspect="AspectFit" Margin="0,-20,0,0"/>
-                    <Label Text="LOGIN TO YOUR ACCOUNT" TextColor="White" VerticalTextAlignment="Start" HorizontalOptions="Center" FontSize="31" FontFamily="PlusJarkataSansBold" Margin="0,100,0,0"/>
+                    <Label Text="LOGIN TO YOUR ACCOUNT" TextColor="White" VerticalTextAlignment="Start" HorizontalOptions="Center" FontSize="26" FontFamily="PlusJarkataSansBold" Margin="0,100,0,0"/>
             </Grid>
         </StackLayout>
     </Frame>
