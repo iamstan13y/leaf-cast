@@ -34,7 +34,8 @@ xmlns:vms="clr-namespace:LeafCast.ViewModels;assembly=LeafCast"
                                 TitleColor="#808080"
                                 WidthRequest="100"
                                 ItemsSource="{Binding Grades}"
-                                SelectedItem="{Binding SelectedGrade}">
+                                SelectedItem="{Binding SelectedGrade}"
+                                x:Name="drpGrade">
                         </Picker>
                     </StackLayout>
                 </Frame>
@@ -48,7 +49,8 @@ xmlns:vms="clr-namespace:LeafCast.ViewModels;assembly=LeafCast"
         WidthRequest="100"
         ItemsSource="{Binding Years}"
         SelectedItem="{Binding SelectedYear}"
-                                SelectedIndexChanged="YearPicker_SelectedIndexChanged">
+                                SelectedIndexChanged="YearPicker_SelectedIndexChanged"
+                                x:Name="drpYear">
                         </Picker>
                     </StackLayout>
                 </Frame>

@@ -92,14 +92,14 @@ public partial class PredictionsPage : ContentPage
 
     private void UpdatePredictedPrice()
     {
-        if (string.IsNullOrEmpty(SelectedGrade) || SelectedYear == 0)
-        {
-            predictedPrice.Text = "0.00"; // Set default value if no selection
-            return;
-        }
+        //if (string.IsNullOrEmpty(drpGrade.sele) || SelectedYear == 0)
+        //{
+        //    predictedPrice.Text = "0.00"; // Set default value if no selection
+        //    return;
+        //}
 
         // Find the prediction matching the selected grade and year
-        var prediction = Predictions.FirstOrDefault(p => p.Id == SelectedGrade && p.Year == SelectedYear);
+        var prediction = Predictions.FirstOrDefault(p => p.Id == drpGrade.SelectedItem && p.Year == (int)drpYear.SelectedItem);
 
         if (prediction != null)
         {
