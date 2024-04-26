@@ -29,16 +29,16 @@
                         <!-- First Card -->
                         <Frame BackgroundColor="#FCDC5C" CornerRadius="20" Margin="0,0,20,0" WidthRequest="145" BorderColor="Transparent">
                             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                <Label Text="$4.00" HorizontalOptions="Center" TextColor="Black" FontSize="30"/>
-                                <Label Text="Previous Season Price" HorizontalOptions="Center" TextColor="Black" FontSize="Small"/>
+                                <Label Text="$4.00" HorizontalOptions="Center" TextColor="Black" FontSize="28"/>
+                                <Label Text="Previous Season Price" HorizontalOptions="Center" TextColor="Black" FontSize="Micro"/>
                             </StackLayout>
                         </Frame>
 
                         <!-- Second Card -->
                         <Frame BackgroundColor="#E3B080" CornerRadius="20" Margin="0,0,0,0" WidthRequest="130" BorderColor="Transparent">
                             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                <Label Text="$4.30" HorizontalOptions="Center" TextColor="Black" FontSize="30"/>
-                                <Label Text="Predicted Price" HorizontalOptions="Center" TextColor="Black" FontSize="Small"/>
+                                <Label Text="$4.30" HorizontalOptions="Center" TextColor="Black" FontSize="28"/>
+                                <Label Text="Predicted Price" HorizontalOptions="Center" TextColor="Black" FontSize="Micro"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -47,9 +47,9 @@
             </StackLayout>
         <Label Text="Previous Season Top 5 Grades" HorizontalOptions="Center" TextColor="Black" FontSize="18" Margin="0,380,0,0"/>
 
-        <lvc:PieChart Series="{Binding Series}" InitialRotation="-30" WidthRequest="400"  Margin="0,200,0,0"/>
+        <lvc:PieChart Series="{Binding Series}" InitialRotation="-30" WidthRequest="370"  Margin="0,200,0,0"/>
         <StackLayout>
-            <Button x:Name="viewMoreButton" Text="View More..." Margin="0,690,0,0" WidthRequest="150" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
+            <Button x:Name="viewMoreButton" Text="View More..." Margin="0,670,0,0" WidthRequest="150" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
         </StackLayout>
         <local:NavBar />
     </Grid>
