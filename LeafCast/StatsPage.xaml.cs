@@ -5,18 +5,30 @@ namespace LeafCast;
 
 public partial class StatsPage : ContentPage
 {
-	public StatsPage()
+    private async Task InitializeAsync()
+    {
+        var httpClient = new HttpClient();
+        var httpService = new HttpService(httpClient);
+        var viewModel = new TopGradesViewModel
+        {
+            HttpService = httpService
+        };
+
+        await viewModel.LoadDataAsync();
+        BindingContext = viewModel;
+    }
+
+    public StatsPage()
 	{
-		InitializeComponent();
+        InitializeComponent();
+        InitializeAsync().ConfigureAwait(false);
 
-        //var httpClient = new HttpClient();
-        //var httpService = new HttpService(httpClient);
-        //InitializeComponent();
-        //var viewModel = new TopGradesViewModel
-        //{
-        //    HttpService = httpService
-        //};
+        var backButtonGestureRecognizer = new TapGestureRecognizer();
+        backButtonGestureRecognizer.Tapped += async (s, e) =>
+        {
+            await Navigation.PushAsync(new DashboardPage());
+        };
 
-        BindingContext = new TopGradesViewModel();
+        backButton.GestureRecognizers.Add(backButtonGestureRecognizer);
     }
 }
