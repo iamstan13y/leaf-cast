@@ -17,6 +17,7 @@ public class UserController(IUserRepository repository) : ControllerBase
     {
         var result = await _repository.AddAsync(new User
         {
+            FullName = request.FullName,
             UserName = request.UserName,
             Password = request.Password,
             PhoneNumber = request.PhoneNumber.ToZimMobileNumber()

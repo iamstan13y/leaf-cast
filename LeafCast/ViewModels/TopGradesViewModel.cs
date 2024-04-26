@@ -14,6 +14,29 @@ public partial class TopGradesViewModel : ObservableObject
 
     public TopGradesViewModel()
     {
+        Grades = [
+            "A1E",
+            "A1EA",
+            "B1",
+            "B2MD",
+            "C2LV",
+            "L3OJA",
+            "C4EV",
+            "C4OFA",
+            "C5L",
+            "H4R"
+        ];
+
+        Years = [
+            "2024",
+            "2023",
+            "2022",
+            "2021",
+            "2020",
+            "2019"
+
+        ];
+        SelectedGrade = Grades[0];
         Predictions =
     [
         new Prediction { Id = 1, PredictedPrice = 2.09M, ActualPrice = 2.33M, Year = 2023 },
@@ -46,12 +69,12 @@ public partial class TopGradesViewModel : ObservableObject
         new ColumnSeries<double>
         {
             Name = "Exports (USD)",
-            Values = new double[] { 4720495.94, 3248698.67, 1461244.57, 9113863.2, 4798538.38}
+            Values = new double[] { 4720495.94, 3248698.67, 1461244.57, 9113863.2, 4798538.38 }
         },
         new ColumnSeries<double>
         {
             Name = "Imports (USD)",
-            Values = new double[] { 8576220.92, 7295713.69, 2276123.69, 11127734.07, 8483738.46}
+            Values = new double[] { 8576220.92, 7295713.69, 2276123.69, 11127734.07, 8483738.46 }
         }
     ];
 
@@ -123,4 +146,8 @@ public partial class TopGradesViewModel : ObservableObject
 
     public List<Prediction> Predictions { get; set; }
     public Prediction SelectedItem { get; set; }
+    public List<string> Grades { get; set; }
+    public string SelectedGrade { get; set; }
+    public List<string> Years { get; set; }
+    public string SelectedYear { get; set; }
 }

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LeafCast.API.Models.Data;
+namespace LeafCast.Models.Data;
 
 public class User
 {

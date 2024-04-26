@@ -17,7 +17,9 @@
 
         <Frame IsVisible="true" BackgroundColor="#CFC9B1" CornerRadius="50" VerticalOptions="End"  HeightRequest="580" HasShadow="False" BorderColor="Transparent">
             <StackLayout Padding="40">
-                <Entry Placeholder="Email" Margin="0,20,0,0"/>
+                <Entry Placeholder="Full Name" Margin="0,20,0,0"/>
+                
+                <Entry Placeholder="Phone Number" Margin="0,20,0,0"/>
 
                 <Entry Placeholder="Username" Margin="0,20,0,0"/>
 
