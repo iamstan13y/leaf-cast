@@ -17,10 +17,30 @@
             </StackLayout>
         </Frame>
 
+        <Frame IsVisible="true" BackgroundColor="#D9D9D9" CornerRadius="50" VerticalOptions="End" HeightRequest="600" HasShadow="False" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal" HeightRequest="100" WidthRequest="300" Margin="0,0,0,450">
 
-        <Frame IsVisible="true" BackgroundColor="#D9D9D9" CornerRadius="50" VerticalOptions="End"  HeightRequest="600" HasShadow="False" BorderColor="Transparent">
-            <local:NavBar />
+  <Frame BackgroundColor="#FCDC5C" CornerRadius="20" Margin="0,0,20,0" WidthRequest="145" BorderColor="Transparent">
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+      <!--<Picker 
+          ItemsSource="{YourItemsList}"
+          SelectedItem="{YourSelectedItem}"
+      />-->
+    </StackLayout>
+  </Frame>
+
+  <Frame BackgroundColor="#E3B080" CornerRadius="20" Margin="0,0,0,0" WidthRequest="130" BorderColor="Transparent">
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+      <!--<Picker 
+          ItemsSource="{YourItemsList2}"
+          SelectedItem="{YourSelectedItem2}"
+      />-->
+    </StackLayout>
+  </Frame>
+</StackLayout>
+
         </Frame>
+        <local:NavBar />
 
     </Grid>
 
