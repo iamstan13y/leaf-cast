@@ -8,7 +8,8 @@ namespace LeafCast
         {
             InitializeComponent();
             
-            MainPage = new NavigationPage(new DashboardPage());
+
+            MainPage = new NavigationPage(new SplashScreenPage());
         }
     }
 }
