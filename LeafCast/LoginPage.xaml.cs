@@ -13,6 +13,14 @@
             };
 
             signUpLabel.GestureRecognizers.Add(signUpTapGestureRecognizer);
+
+            var loginTapGestureRecognizer = new TapGestureRecognizer();
+            loginTapGestureRecognizer.Tapped += async (s, e) =>
+            {
+                await Navigation.PushAsync(new DashboardPage());
+            };
+
+            loginButton.GestureRecognizers.Add(loginTapGestureRecognizer);
         }
     }
 }
