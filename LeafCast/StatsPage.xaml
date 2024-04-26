@@ -18,17 +18,33 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <lvc:PieChart Series="{Binding Series}" InitialRotation="-90"/>
+                <Label Text="Previous Season Top 5 Grades" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="18" Margin="0,620,0,0"/>
 
-                <lvc:CartesianChart
+                <lvc:PieChart Series="{Binding Series}" InitialRotation="-30" WidthRequest="400"  Margin="0,-450,0,0"/>
+
+                <Label Text="Annual Tobacco Market Trends(Exports &amp; Imports)" HorizontalOptions="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="0,960,0,0"/>
+                <!--<lvc:CartesianChart
         Series="{Binding XSeries}"
         XAxes="{Binding YAxes}"
         LegendPosition="Right"
-                    Margin="0,100,0,0"
-                    HeightRequest="300" WidthRequest="400">
+                    Margin="0,250,0,0"
+                    HeightRequest="300" WidthRequest="350">
+                </lvc:CartesianChart>-->
+
+
+                <lvc:CartesianChart
+        Series="{Binding TrendSeries}"
+        XAxes="{Binding XAxes}"
+        LegendPosition="Top"
+                    Margin="0,270,0,0"
+HeightRequest="300" WidthRequest="360">
                 </lvc:CartesianChart>
+                
+                
+    <Button x:Name="backButton" Text="Go Back" Margin="0,700,0,0" HeightRequest="50" WidthRequest="150" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
             </Grid>
         </ScrollView>
     </ContentPage.Content>
+    
 
 </ContentPage>
