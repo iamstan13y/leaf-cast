@@ -13,7 +13,7 @@
                 <Image Source="user.png" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="20,40,0,0" WidthRequest="120"/>
 
                 <!-- User Name -->
-                <Label Text="John Doe" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="0,70,0,0" FontSize="30" />
+                <Label Text="J Masvaure" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="0,70,0,0" FontSize="30" />
             </StackLayout>
         </Frame>
 
