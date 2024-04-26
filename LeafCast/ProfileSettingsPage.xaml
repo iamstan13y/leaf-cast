@@ -19,8 +19,8 @@
 
 
         <Frame IsVisible="true" BackgroundColor="#D9D9D9" CornerRadius="50" VerticalOptions="End"  HeightRequest="600" HasShadow="False" BorderColor="Transparent">
-            <local:NavBar />
         </Frame>
+            <local:NavBar />
 
     </Grid>
 
