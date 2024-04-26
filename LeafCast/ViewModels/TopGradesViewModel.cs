@@ -4,6 +4,7 @@ using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.SkiaSharpView;
 using SkiaSharp;
 using LeafCast.Services;
+using LeafCast.Models.Data;
 
 namespace LeafCast.ViewModels;
 
@@ -13,6 +14,20 @@ public partial class TopGradesViewModel : ObservableObject
 
     public TopGradesViewModel()
     {
+        Predictions =
+    [
+        new Prediction { Id = 1, PredictedPrice = 2.09M, ActualPrice = 2.33M, Year = 2023 },
+        new Prediction { Id = 2, PredictedPrice = 3.15M, ActualPrice = 3.08M, Year = 2020 },
+        new Prediction { Id = 3, PredictedPrice = 4.27M, ActualPrice = 4.51M, Year = 2024 },
+        new Prediction { Id = 4, PredictedPrice = 1.82M, ActualPrice = 1.76M, Year = 2022 },
+        new Prediction { Id = 5, PredictedPrice = 5.39M, ActualPrice = 5.24M, Year = 2021 },
+        new Prediction { Id = 6, PredictedPrice = 2.54M, ActualPrice = 2.72M, Year = 2020 },
+        new Prediction { Id = 7, PredictedPrice = 4.81M, ActualPrice = 4.97M, Year = 2019 },
+        new Prediction { Id = 8, PredictedPrice = 1.93M, ActualPrice = 1.88M, Year = 2023 },
+        new Prediction { Id = 9, PredictedPrice = 3.62M, ActualPrice = 3.49M, Year = 2022 },
+        new Prediction { Id = 10, PredictedPrice = 5.05M, ActualPrice = 5.19M, Year = 2021 }
+    ];
+        SelectedItem = Predictions[0];
     }
 
     public IHttpService HttpService
@@ -105,4 +120,7 @@ public partial class TopGradesViewModel : ObservableObject
     }
 
     public IEnumerable<ISeries> Series { get; set; }
+
+    public List<Prediction> Predictions { get; set; }
+    public Prediction SelectedItem { get; set; }
 }
