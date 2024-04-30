@@ -140,11 +140,13 @@ public partial class PredictionsPage : ContentPage
 
         if (prediction != null)
         {
-            predictedPrice.Text = prediction.PredictedPrice.ToString("0.00");
+            predictedPrice.Text = $"${prediction.PredictedPrice:0.00}";
+            actualPrice.Text = $"${prediction.ActualPrice:0.00}";
         }
         else
         {
             predictedPrice.Text = "N/A";
+            actualPrice.Text = "N/A";
         }
     }
 }
