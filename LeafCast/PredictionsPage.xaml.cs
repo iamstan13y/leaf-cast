@@ -11,9 +11,9 @@ namespace LeafCast;
 
 public partial class PredictionsPage : ContentPage
 {
-	public PredictionsPage()
-	{
-		InitializeComponent();
+    public PredictionsPage()
+    {
+        InitializeComponent();
 
         Grades = [
             "A1E",
@@ -72,8 +72,52 @@ public partial class PredictionsPage : ContentPage
         new Prediction { Id = "H4R", PredictedPrice = 1.83M, ActualPrice = 1.79M, Year = 2024 },
 
         // ID: C2LV
-        new Prediction { Id = "C2LV", PredictedPrice = 5.39M, ActualPrice = 5.24M, Year = 2021 },
-        new Prediction { Id = "C2LV", PredictedPrice = 5.42M, ActualPrice = 5.31M, Year = 2019 },
+        new Prediction { Id = "C2LV", PredictedPrice = 5.39M, ActualPrice = 5.24M, Year = 2019 },
+        new Prediction { Id = "C2LV", PredictedPrice = 5.42M, ActualPrice = 5.31M, Year = 2020 },
+        new Prediction { Id = "C2LV", PredictedPrice = 5.45M, ActualPrice = 5.29M, Year = 2021 },
+        new Prediction { Id = "C2LV", PredictedPrice = 5.48M, ActualPrice = 5.36M, Year = 2022 },
+        new Prediction { Id = "C2LV", PredictedPrice = 5.51M, ActualPrice = 5.43M, Year = 2023 },
+        new Prediction { Id = "C2LV", PredictedPrice = 5.54M, ActualPrice = 5.47M, Year = 2024 },
+
+        //ID: B2MD
+        new Prediction { Id = "B2MD", PredictedPrice = 3.45M, ActualPrice = 3.39M, Year = 2019 },
+        new Prediction { Id = "B2MD", PredictedPrice = 3.48M, ActualPrice = 3.41M, Year = 2020 },
+        new Prediction { Id = "B2MD", PredictedPrice = 3.51M, ActualPrice = 3.45M, Year = 2021 },
+        new Prediction { Id = "B2MD", PredictedPrice = 3.54M, ActualPrice = 3.49M, Year = 2022 },
+        new Prediction { Id = "B2MD", PredictedPrice = 3.57M, ActualPrice = 3.52M, Year = 2023 },
+        new Prediction { Id = "B2MD", PredictedPrice = 3.60M, ActualPrice = 3.55M, Year = 2024 },
+
+        //ID: C4EV
+        new Prediction { Id = "C4EV", PredictedPrice = 1.93M, ActualPrice = 1.88M, Year = 2019 },
+        new Prediction { Id = "C4EV", PredictedPrice = 1.97M, ActualPrice = 1.91M, Year = 2020 },
+        new Prediction { Id = "C4EV", PredictedPrice = 2.01M, ActualPrice = 1.95M, Year = 2021 },
+        new Prediction { Id = "C4EV", PredictedPrice = 2.05M, ActualPrice = 2.00M, Year = 2022 },
+        new Prediction { Id = "C4EV", PredictedPrice = 2.09M, ActualPrice = 2.04M, Year = 2023 },
+        new Prediction { Id = "C4EV", PredictedPrice = 2.13M, ActualPrice = 2.08M, Year = 2024 },
+
+        //ID: L3OJA
+        new Prediction { Id = "L3OJA", PredictedPrice = 2.54M, ActualPrice = 2.72M, Year = 2019 },
+        new Prediction { Id = "L3OJA", PredictedPrice = 2.58M, ActualPrice = 2.66M, Year = 2020 },
+        new Prediction { Id = "L3OJA", PredictedPrice = 2.62M, ActualPrice = 2.60M, Year = 2021 },
+        new Prediction { Id = "L3OJA", PredictedPrice = 2.66M, ActualPrice = 2.58M, Year = 2022 },
+        new Prediction { Id = "L3OJA", PredictedPrice = 2.70M, ActualPrice = 2.54M, Year = 2023 },
+        new Prediction { Id = "L3OJA", PredictedPrice = 2.74M, ActualPrice = 2.50M, Year = 2024 },
+
+        //ID: C4OFA
+        new Prediction { Id = "C4OFA", PredictedPrice = 3.62M, ActualPrice = 3.49M, Year = 2019 },
+        new Prediction { Id = "C4OFA", PredictedPrice = 3.68M, ActualPrice = 3.55M, Year = 2020 },
+        new Prediction { Id = "C4OFA", PredictedPrice = 3.74M, ActualPrice = 3.61M, Year = 2021 },
+        new Prediction { Id = "C4OFA", PredictedPrice = 3.80M, ActualPrice = 3.67M, Year = 2022 },
+        new Prediction { Id = "C4OFA", PredictedPrice = 3.86M, ActualPrice = 3.73M, Year = 2023 },
+        new Prediction { Id = "C4OFA", PredictedPrice = 3.92M, ActualPrice = 3.79M, Year = 2024 },
+
+        //ID: C5L
+        new Prediction { Id = "C5L", PredictedPrice = 5.05M, ActualPrice = 5.19M, Year = 2019 },
+        new Prediction { Id = "C5L", PredictedPrice = 5.10M, ActualPrice = 5.25M, Year = 2020 },
+        new Prediction { Id = "C5L", PredictedPrice = 5.15M, ActualPrice = 5.31M, Year = 2021 },
+        new Prediction { Id = "C5L", PredictedPrice = 5.20M, ActualPrice = 5.37M, Year = 2022 },
+        new Prediction { Id = "C5L", PredictedPrice = 5.25M, ActualPrice = 5.43M, Year = 2023 },
+        new Prediction { Id = "C5L", PredictedPrice = 5.30M, ActualPrice = 5.49M, Year = 2024 },
     ];
         SelectedItem = Predictions[0];
     }
@@ -92,22 +136,15 @@ public partial class PredictionsPage : ContentPage
 
     private void UpdatePredictedPrice()
     {
-        //if (string.IsNullOrEmpty(drpGrade.sele) || SelectedYear == 0)
-        //{
-        //    predictedPrice.Text = "0.00"; // Set default value if no selection
-        //    return;
-        //}
-
-        // Find the prediction matching the selected grade and year
         var prediction = Predictions.FirstOrDefault(p => p.Id == drpGrade.SelectedItem && p.Year == (int)drpYear.SelectedItem);
 
         if (prediction != null)
         {
-            predictedPrice.Text = prediction.PredictedPrice.ToString("0.00"); // Display predicted price
+            predictedPrice.Text = prediction.PredictedPrice.ToString("0.00");
         }
         else
         {
-            predictedPrice.Text = "N/A"; // Display "N/A" if no matching prediction found
+            predictedPrice.Text = "N/A";
         }
     }
 }
