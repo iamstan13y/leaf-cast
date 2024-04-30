@@ -58,9 +58,11 @@ xmlns:vms="clr-namespace:LeafCast.ViewModels;assembly=LeafCast"
             </StackLayout>
 
         </Frame>
-        <StackLayout VerticalOptions="CenterAndExpand" WidthRequest="250" Margin="0,5,0,0" HeightRequest="100" HorizontalOptions="CenterAndExpand" BackgroundColor="#E3B080">
-            <Label x:Name="predictedPrice" Text="0.00" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,0,0,0" FontSize="30" />
+        <StackLayout VerticalOptions="CenterAndExpand" WidthRequest="250" Margin="0,75,0,0" HeightRequest="200" HorizontalOptions="CenterAndExpand" BackgroundColor="#E3B080">
+            <Label x:Name="predictedPrice" Text="0.00" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,0,0,0" FontSize="30" FontAttributes="Bold"/>
             <Label Text="Predicted Price for Selected Grade" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,10,0,0" FontSize="Small" />
+            <Label x:Name="actualPrice" Text="0.00" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,20,0,0" FontSize="30" FontAttributes="Bold"/>
+            <Label Text="Actual Price for Selected Grade" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,10,0,0" FontSize="Small" />
         </StackLayout>
         <local:NavBar />
 
