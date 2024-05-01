@@ -5,7 +5,7 @@
     <Frame IsVisible="true" BackgroundColor="#415041" CornerRadius="20" VerticalOptions="End" HeightRequest="65" HasShadow="False" BorderColor="Transparent" Margin="0,0,0,0">
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <!-- Home Icon -->
-            <Image Source="nav_1.png" Margin="0,0,250,0" WidthRequest="30" HeightRequest="25" >
+            <Image Source="nav_1.png" Margin="0,0,250,0" WidthRequest="30" HeightRequest="25" x:Name="x">
                 <Image.GestureRecognizers>
                     
                 </Image.GestureRecognizers>
