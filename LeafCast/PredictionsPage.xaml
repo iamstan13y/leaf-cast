@@ -32,10 +32,10 @@ xmlns:vms="clr-namespace:LeafCast.ViewModels;assembly=LeafCast"
                         <Picker BackgroundColor="#F0F0F0"
                                 TextColor="#333333"
                                 TitleColor="#808080"
-                                WidthRequest="100"
+                                WidthRequest="100" 
                                 ItemsSource="{Binding Grades}"
                                 SelectedItem="{Binding SelectedGrade}"
-                                SelectedIndexChanged="YearPicker_SelectedIndexChanged"
+                                
                                 FontSize="18"
                                 x:Name="drpGrade">
                         </Picker>
