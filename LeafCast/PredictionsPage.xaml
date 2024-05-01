@@ -28,44 +28,49 @@ xmlns:vms="clr-namespace:LeafCast.ViewModels;assembly=LeafCast"
 
                 <Frame BackgroundColor="Transparent" CornerRadius="20" Margin="0,0,20,0" WidthRequest="145" BorderColor="Transparent">
                     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                        <Label Text="Select Grade" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="0,0,0,0" FontSize="15" />
+                        <Label Text="Select Grade" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="0,0,0,0" FontSize="16" />
                         <Picker BackgroundColor="#F0F0F0"
                                 TextColor="#333333"
                                 TitleColor="#808080"
                                 WidthRequest="100"
                                 ItemsSource="{Binding Grades}"
                                 SelectedItem="{Binding SelectedGrade}"
+                                SelectedIndexChanged="YearPicker_SelectedIndexChanged"
+                                FontSize="18"
                                 x:Name="drpGrade">
                         </Picker>
                     </StackLayout>
                 </Frame>
-
-                <Frame BackgroundColor="Transparent" CornerRadius="20" Margin="0,0,0,0" WidthRequest="140" BorderColor="Transparent">
+                <Frame BackgroundColor="Transparent" CornerRadius="50" Margin="0,0,0,0" WidthRequest="140" BorderColor="Transparent">
                     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                        <Label Text="Select Year" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="0,0,0,0" FontSize="15" />
+                        <Label Text="Select Year" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="0,0,0,0" FontSize="16" />
                         <Picker BackgroundColor="#F0F0F0"
-        TextColor="#333333"
-        TitleColor="#808080"
-        WidthRequest="100"
-        ItemsSource="{Binding Years}"
-        SelectedItem="{Binding SelectedYear}"
+                                TextColor="#333333"
+                                TitleColor="#808080"
+                                WidthRequest="100"
+                                ItemsSource="{Binding Years}"
+                                SelectedItem="{Binding SelectedYear}"
                                 SelectedIndexChanged="YearPicker_SelectedIndexChanged"
+                                FontSize="18"
                                 x:Name="drpYear">
                         </Picker>
                     </StackLayout>
                 </Frame>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#FCDC5C" CornerRadius="30" WidthRequest="270" Margin="0,15,0,0" HeightRequest="120" HorizontalOptions="CenterAndExpand">
+            <StackLayout>
+                <Label x:Name="predictedPrice" Text="0.00" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,0,0,0" FontSize="30" FontAttributes="Bold"/>
+                <Label Text="Predicted Price for Selected Grade" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,10,0,0" FontSize="Small" />
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#E3B080" CornerRadius="30" WidthRequest="270" Margin="0,300,0,0" HeightRequest="120" HorizontalOptions="CenterAndExpand">
+            <StackLayout>
+                <Label x:Name="actualPrice" Text="0.00" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,0,0,0" FontSize="30" FontAttributes="Bold"/>
+                <Label Text="Actual Price for Selected Grade" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,5,0,0" FontSize="Small" />
 
             </StackLayout>
-
         </Frame>
-        <StackLayout VerticalOptions="CenterAndExpand" WidthRequest="250" Margin="0,75,0,0" HeightRequest="200" HorizontalOptions="CenterAndExpand" BackgroundColor="#E3B080">
-            <Label x:Name="predictedPrice" Text="0.00" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,0,0,0" FontSize="30" FontAttributes="Bold"/>
-            <Label Text="Predicted Price for Selected Grade" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,10,0,0" FontSize="Small" />
-            <Label x:Name="actualPrice" Text="0.00" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,20,0,0" FontSize="30" FontAttributes="Bold"/>
-            <Label Text="Actual Price for Selected Grade" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,10,0,0" FontSize="Small" />
-        </StackLayout>
         <local:NavBar />
-
     </Grid>
-
 </ContentPage>
