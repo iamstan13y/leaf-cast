@@ -38,6 +38,8 @@ public partial class PredictionsPage : ContentPage
 
         ];
         SelectedGrade = Grades[0];
+        SelectedYear = Years[0];
+
         Predictions =
     [
          new Prediction { Id = "A1E", PredictedPrice = 2.09M, ActualPrice = 2.33M, Year = 2023 },
@@ -129,11 +131,9 @@ public partial class PredictionsPage : ContentPage
     public string SelectedGrade { get; set; }
     public List<int> Years { get; set; }
     public int SelectedYear { get; set; }
-    public void YearPicker_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        UpdatePredictedPrice();
-    }
 
+    public void YearPicker_SelectedIndexChanged(object sender, EventArgs e) => UpdatePredictedPrice();
+    
     private void UpdatePredictedPrice()
     {
         var prediction = Predictions.FirstOrDefault(p => p.Id == drpGrade.SelectedItem && p.Year == (int)drpYear.SelectedItem);
