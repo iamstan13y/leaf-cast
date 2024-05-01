@@ -1,5 +1,4 @@
-﻿using Android.Accounts;
-using LeafCast.Extensions;
+﻿using LeafCast.Extensions;
 using LeafCast.Models.Data;
 using LeafCast.Models.Local;
 
