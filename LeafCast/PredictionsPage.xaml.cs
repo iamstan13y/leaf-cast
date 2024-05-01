@@ -29,16 +29,15 @@ public partial class PredictionsPage : ContentPage
         ];
 
         Years = [
-            2024,
-            2023,
-            2022,
-            2021,
-            2020,
-            2019
+            "2024",
+            "2023",
+            "2022",
+            "2021",
+            "2020",
+            "2019"
 
         ];
         SelectedGrade = Grades[0];
-        SelectedYear = Years[0];
 
         Predictions =
     [
@@ -129,7 +128,7 @@ public partial class PredictionsPage : ContentPage
     public Prediction SelectedItem { get; set; }
     public List<string> Grades { get; set; }
     public string SelectedGrade { get; set; }
-    public List<int> Years { get; set; }
+    public List<string> Years { get; set; }
     public int SelectedYear { get; set; }
 
     public void YearPicker_SelectedIndexChanged(object sender, EventArgs e) => UpdatePredictedPrice();
