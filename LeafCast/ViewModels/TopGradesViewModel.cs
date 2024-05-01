@@ -122,14 +122,23 @@ public partial class TopGradesViewModel : ObservableObject
         if (_httpService == null)
             return;
 
-        var result = await _httpService.GetTopGradesAsync();
+        //var result = await _httpService.GetTopGradesAsync();
 
-        if (result.Success)
+        //if (result.Success)
+        //{
+
+        var outer = 0;
+        var data = new Dictionary<string, decimal>
         {
-            var outer = 0;
-            var data = result.Data;
+            { "C2LV", 25.97M },
+            { "L3OJA", 25.52M },
+            { "C4OFA", 17.27M },
+            { "A1EA", 16M },
+            { "H4R", 15.24M }
+        };
 
-            Series = data.Select((entry, index) =>
+
+        Series = data.Select((entry, index) =>
             {
                 var series = new PieSeries<decimal>
                 {
@@ -158,7 +167,7 @@ public partial class TopGradesViewModel : ObservableObject
 
                 return series;
             }).ToList();
-        }
+        //}
     }
 
     public async Task LoadMarketTrendsAsync()
@@ -175,5 +184,5 @@ public partial class TopGradesViewModel : ObservableObject
     public List<int> Years { get; set; }
     public int SelectedYear { get; set; }
 
-    
+
 }
