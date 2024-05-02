@@ -5,6 +5,7 @@ using LiveChartsCore.SkiaSharpView;
 using SkiaSharp;
 using LeafCast.Services;
 using LeafCast.Models.Data;
+using System.Collections.ObjectModel;
 
 namespace LeafCast.ViewModels;
 
@@ -184,5 +185,66 @@ public partial class TopGradesViewModel : ObservableObject
     public List<int> Years { get; set; }
     public int SelectedYear { get; set; }
 
+
+
+
+    public ISeries[] PriceSeries { get; set; } =
+    [
+        new LineSeries<double>
+        {
+            Name = "A1E",
+            Values = new ObservableCollection<double> { 2.35, 2.21, 2.29, 2.26, 2.33, 2.33 }
+        },
+        new LineSeries<double>
+        {
+            Name = "A1EA",
+            Values = new ObservableCollection<double> { 3.12, 3.08, 3.10, 3.16, 3.07, 3.09 },
+        },
+        new LineSeries<double>
+        {
+            Name = "B1",
+            Values = new ObservableCollection<double> { 4.34, 4.38, 4.41, 4.45, 4.51, 4.55 },
+        },
+        new LineSeries<double>
+        {
+            Name = "H4R",
+            Values = new ObservableCollection<double> { 1.79, 1.80, 1.82, 1.84, 1.85, 1.79 },
+        },
+    ];
+
+    public Axis[] PriceXAxes { get; set; } =
+    [
+        new Axis
+        {
+            CrosshairLabelsBackground = SKColors.DarkOrange.AsLvcColor(),
+            CrosshairLabelsPaint = new SolidColorPaint(SKColors.DarkRed, 1),
+            CrosshairPaint = new SolidColorPaint(SKColors.DarkOrange, 1),
+            LabelsRotation = 45,
+            Labels = new[]
+        {
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+        }
+        }
+    ];
+
+    public Axis[] PriceYAxes { get; set; } =
+[
+    new Axis
+    {
+        MinLimit = 1,
+        MaxLimit = 5,
+        ForceStepToMin = true,
+        MinStep = 1,
+        Labeler = value => value.ToString("C"),
+        CrosshairLabelsBackground = SKColors.DarkOrange.AsLvcColor(),
+        CrosshairLabelsPaint = new SolidColorPaint(SKColors.DarkRed, 1),
+        CrosshairPaint = new SolidColorPaint(SKColors.DarkOrange, 1),
+        CrosshairSnapEnabled = true // snapping is also supported
+    }
+];
 
 }
