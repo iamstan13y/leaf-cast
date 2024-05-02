@@ -12,39 +12,42 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <ScrollView HeightRequest="2000">
-            <Grid BackgroundColor="#D9D9D9">
+        <ScrollView HeightRequest="2000" IsEnabled="True">
+            <Grid BackgroundColor="#D9D9D9" HeightRequest="2500">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <Label Text="Previous Season Top 5 Grades" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="18" Margin="0,620,0,0"/>
 
-                <lvc:PieChart Series="{Binding Series}" InitialRotation="-30" WidthRequest="400"  Margin="0,-450,0,0"/>
+                <lvc:PieChart Series="{Binding Series}" InitialRotation="-30" WidthRequest="400"  Margin="0,-950,0,0"/>
 
-                <Label Text="Annual Tobacco Market Trends(Exports &amp; Imports)" HorizontalOptions="Center" TextColor="Black" FontSize="16" FontAttributes="Bold" Margin="0,960,0,0"/>
-                <!--<lvc:CartesianChart
-        Series="{Binding XSeries}"
-        XAxes="{Binding YAxes}"
-        LegendPosition="Right"
-                    Margin="0,250,0,0"
-                    HeightRequest="300" WidthRequest="350">
-                </lvc:CartesianChart>-->
-
+                <Label Text="Annual Tobacco Market Trends(Exports &amp; Imports)" HorizontalOptions="Center" TextColor="Black" FontSize="16" FontAttributes="Bold" Margin="0,980,0,0"/>
 
                 <lvc:CartesianChart
-        Series="{Binding TrendSeries}"
-        XAxes="{Binding XAxes}"
-        LegendPosition="Top"
-                    Margin="0,270,0,0"
-HeightRequest="300" WidthRequest="360">
+                Series="{Binding TrendSeries}"
+                XAxes="{Binding XAxes}"
+                LegendPosition="Top"
+                Margin="0,-180,0,0"
+                HeightRequest="300" WidthRequest="360">
                 </lvc:CartesianChart>
-                
-                
-    <Button x:Name="backButton" Text="Go Back" Margin="0,700,0,0" HeightRequest="50" WidthRequest="150" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
+
+
+                <Label Text="Annual Tobacco Price Trends" HorizontalOptions="Center" TextColor="Black" FontSize="16" FontAttributes="Bold" Margin="0,1350,0,0"/>
+                <lvc:CartesianChart
+            Series="{Binding PriceSeries}"
+            XAxes="{Binding PriceXAxes}"
+            YAxes="{Binding PriceYAxes}"
+                    LegendPosition="Top"
+                Margin="0,700,0,0"
+            HeightRequest="400" WidthRequest="400">
+                </lvc:CartesianChart>
+
+                <Button x:Name="backButton" Text="Go Back" Margin="0,1200,0,0" HeightRequest="50" WidthRequest="150" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
             </Grid>
         </ScrollView>
     </ContentPage.Content>
-    
+
+
 
 </ContentPage>
