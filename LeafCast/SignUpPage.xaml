@@ -16,26 +16,28 @@
         </Frame>
 
         <Frame IsVisible="true" BackgroundColor="#CFC9B1" CornerRadius="50" VerticalOptions="End"  HeightRequest="580" HasShadow="False" BorderColor="Transparent">
-            <StackLayout Padding="40">
-                <Entry Placeholder="Full Name" Margin="0,20,0,0"/>
-                
-                <Entry Placeholder="Phone Number" Margin="0,20,0,0"/>
+            <StackLayout Padding="20">
+                <Entry x:Name="fullName" Placeholder="Full Name" Margin="0,20,0,0"/>
 
-                <Entry Placeholder="Username" Margin="0,20,0,0"/>
+                <Entry x:Name="phoneNumber" Placeholder="Phone Number" Margin="0,20,0,0"/>
 
-                <Entry Placeholder="Password" IsPassword="True" Margin="0,20,0,0"/>
+                <Entry x:Name="username" Placeholder="Username" Margin="0,20,0,0"/>
+
+                <Entry x:Name="password" Placeholder="Password" IsPassword="True" Margin="0,20,0,0"/>
 
                 <Entry Placeholder="Confirm Password" IsPassword="True" Margin="0,20,0,0"/>
 
-                <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
+                <!--<StackLayout Orientation="Horizontal" Margin="0,15,0,0">
                     <RadioButton x:Name="farmerRadioButton" Content="Farmer"/>
 
                     <RadioButton x:Name="buyerRadioButton" Content="Buyer"/>
-                </StackLayout>
+                </StackLayout>-->
 
-                <Button Text="Sign Up" Margin="0,60,0,0" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
+                <Button x:Name="signUpButton" Text="Sign Up" Margin="0,40,0,0" FontSize="18" CornerRadius="50" BackgroundColor="#415041" TextColor="White"/>
 
-                <Label x:Name="loginLabel" Text="Already have an account? Login Here" TextColor="Blue" HorizontalOptions="Center" Margin="0,30,0,0" FontSize="15"/>
+                <Label x:Name="loginLabel" Text="Already have an account? Login Here" TextColor="Blue" HorizontalOptions="Center" Margin="0,15,0,0" FontSize="15"/>
+
+                <ActivityIndicator x:Name="activityIndicator" Color="Gray" IsRunning="False" IsVisible="False" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
         </Frame>
     </Grid>
