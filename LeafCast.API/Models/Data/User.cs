@@ -9,7 +9,7 @@ public class User
     public string? PhoneNumber { get; set; }
     public string? UserName { get; set; }
     public string? Password { get; set; }
-    public bool IsActive { get; set; } = false;
+    public bool IsActive { get; set; } = true;
     [NotMapped]
     public string? Token { get; set; }
 }
