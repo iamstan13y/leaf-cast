@@ -88,6 +88,9 @@
 	  <Compile Update="LoginPage.xaml.cs">
 	    <DependentUpon>LoginPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="OtpPage.xaml.cs">
+	    <DependentUpon>OtpPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="SplashScreenPage.xaml.cs">
 	    <DependentUpon>SplashScreenPage.xaml</DependentUpon>
 	  </Compile>
@@ -113,6 +116,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="NavBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="OtpPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="SignUpPage.xaml">
