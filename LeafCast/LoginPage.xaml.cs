@@ -1,26 +1,25 @@
-﻿namespace LeafCast
+﻿namespace LeafCast;
+
+public partial class LoginPage : ContentPage
 {
-    public partial class LoginPage : ContentPage
+    public LoginPage()
     {
-        public LoginPage()
+        InitializeComponent();
+
+        var signUpTapGestureRecognizer = new TapGestureRecognizer();
+        signUpTapGestureRecognizer.Tapped += async (s, e) =>
         {
-            InitializeComponent();
+            await Navigation.PushAsync(new SignUpPage());
+        };
 
-            var signUpTapGestureRecognizer = new TapGestureRecognizer();
-            signUpTapGestureRecognizer.Tapped += async (s, e) =>
-            {
-                await Navigation.PushAsync(new SignUpPage());
-            };
+        signUpLabel.GestureRecognizers.Add(signUpTapGestureRecognizer);
 
-            signUpLabel.GestureRecognizers.Add(signUpTapGestureRecognizer);
+        var loginTapGestureRecognizer = new TapGestureRecognizer();
+        loginTapGestureRecognizer.Tapped += async (s, e) =>
+        {
+            await Navigation.PushAsync(new DashboardPage());
+        };
 
-            var loginTapGestureRecognizer = new TapGestureRecognizer();
-            loginTapGestureRecognizer.Tapped += async (s, e) =>
-            {
-                await Navigation.PushAsync(new DashboardPage());
-            };
-
-            loginButton.GestureRecognizers.Add(loginTapGestureRecognizer);
-        }
+        loginButton.GestureRecognizers.Add(loginTapGestureRecognizer);
     }
 }
