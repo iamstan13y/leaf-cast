@@ -1,6 +1,5 @@
 using LeafCast.Services;
 using LeafCast.ViewModels;
-using System.ComponentModel;
 
 namespace LeafCast;
 
@@ -20,7 +19,7 @@ public partial class DashboardPage : ContentPage
     }
 
     public DashboardPage()
-	{
+    {
         InitializeComponent();
         InitializeAsync().ConfigureAwait(false);
 
