@@ -23,7 +23,7 @@ public class TobaccoGradeRepository(AppDbContext context) : ITobaccoGradeReposit
         return new Result<bool>(true, "Data saved successfully!");
     }
 
-    public async Task<Result<IEnumerable<TobaccoGrade>>> GetAllAsync() => 
+    public async Task<Result<IEnumerable<TobaccoGrade>>> GetAllAsync() =>
         new Result<IEnumerable<TobaccoGrade>>(await _context.TobaccoGrades!.ToListAsync());
 
     public async Task<Result<TobaccoGrade>> GetByIdAsync(int id)
