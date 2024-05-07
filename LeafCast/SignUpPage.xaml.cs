@@ -12,7 +12,7 @@ public partial class SignUpPage : ContentPage
 
         var httpClient = new HttpClient();
         var httpService = new HttpService(httpClient);
-        
+
         _httpService = httpService;
 
         var loginUpTapGestureRecognizer = new TapGestureRecognizer();
