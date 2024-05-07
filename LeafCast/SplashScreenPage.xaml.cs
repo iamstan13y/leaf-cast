@@ -2,10 +2,10 @@ namespace LeafCast;
 
 public partial class SplashScreenPage : ContentPage
 {
-	public SplashScreenPage()
-	{
-		InitializeComponent();
-	}
+    public SplashScreenPage()
+    {
+        InitializeComponent();
+    }
 
     protected override async void OnAppearing()
     {
