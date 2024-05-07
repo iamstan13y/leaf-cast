@@ -1,3 +1,5 @@
+/* Unmerged change from project 'LeafCast (net8.0-maccatalyst)'
+Before:
 using LiveChartsCore;
 using CommunityToolkit.Mvvm.ComponentModel;
 using LiveChartsCore.SkiaSharpView.Painting;
@@ -5,7 +7,50 @@ using LiveChartsCore.SkiaSharpView;
 using SkiaSharp;
 using LeafCast.Services;
 using LeafCast.Models.Data;
+After:
+using CommunityToolkit.Mvvm.ComponentModel;
+using LeafCast.Models.Data;
+using LeafCast.Services;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.Models.Data;
+*/
 
+/* Unmerged change from project 'LeafCast (net8.0-ios)'
+Before:
+using LiveChartsCore;
+using CommunityToolkit.Mvvm.ComponentModel;
+using LiveChartsCore.SkiaSharpView.Painting;
+using LiveChartsCore.SkiaSharpView;
+using SkiaSharp;
+using LeafCast.Services;
+using LeafCast.Models.Data;
+After:
+using CommunityToolkit.Mvvm.ComponentModel;
+using LeafCast.Models.Data;
+using LeafCast.Services;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.Models.Data;
+*/
+
+/* Unmerged change from project 'LeafCast (net8.0-windows10.0.19041.0)'
+Before:
+using LiveChartsCore;
+using CommunityToolkit.Mvvm.ComponentModel;
+using LiveChartsCore.SkiaSharpView.Painting;
+using LiveChartsCore.SkiaSharpView;
+using SkiaSharp;
+using LeafCast.Services;
+using LeafCast.Models.Data;
+After:
+using CommunityToolkit.Mvvm.ComponentModel;
+using LeafCast.Models.Data;
+using LeafCast.Services;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.Models.Data;
+*/
 
 namespace LeafCast;
 
@@ -132,7 +177,7 @@ public partial class PredictionsPage : ContentPage
     public int SelectedYear { get; set; }
 
     public void YearPicker_SelectedIndexChanged(object sender, EventArgs e) => UpdatePredictedPrice();
-    
+
     private void UpdatePredictedPrice()
     {
         var prediction = Predictions.FirstOrDefault(p => p.Id == drpGrade.SelectedItem && p.Year == (int)drpYear.SelectedItem);
