@@ -1,15 +1,12 @@
-﻿using LeafCast.Services;
+﻿namespace LeafCast;
 
-namespace LeafCast
+public partial class App : Application
 {
-    public partial class App : Application
+    public App()
     {
-        public App()
-        {
-            InitializeComponent();
-            
+        InitializeComponent();
 
-            MainPage = new NavigationPage(new SplashScreenPage());
-        }
+
+        MainPage = new NavigationPage(new SplashScreenPage());
     }
 }

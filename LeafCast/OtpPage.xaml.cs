@@ -11,7 +11,7 @@ public partial class OtpPage : ContentPage
 
         var httpClient = new HttpClient();
         var httpService = new HttpService(httpClient);
-        
+
         _httpService = httpService;
 
         signUpButton.Clicked += SignUpButton_Clicked;

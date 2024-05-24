@@ -25,8 +25,8 @@ public class SmsService(IConfiguration configuration) : ISmsService
 
         request.AddStringBody(body, DataFormat.Json);
         RestResponse response = await client.ExecuteAsync(request);
-        
-        if(response.IsSuccessStatusCode)
+
+        if (response.IsSuccessStatusCode)
         {
             return true;
         }

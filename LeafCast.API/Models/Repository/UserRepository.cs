@@ -8,9 +8,9 @@ namespace LeafCast.API.Models.Repository;
 public class UserRepository
     (AppDbContext context,
     IConfiguration configuration,
-    IPasswordService passwordService, 
-    IJwtService jwtService, 
-    ICodeGeneratorService codeGeneratorService, 
+    IPasswordService passwordService,
+    IJwtService jwtService,
+    ICodeGeneratorService codeGeneratorService,
     ISmsService smsService) : IUserRepository
 {
     private readonly AppDbContext _context = context;

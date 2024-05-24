@@ -1,10 +1,10 @@
-﻿using LiveChartsCore;
-using CommunityToolkit.Mvvm.ComponentModel;
-using LiveChartsCore.SkiaSharpView.Painting;
-using LiveChartsCore.SkiaSharpView;
-using SkiaSharp;
-using LeafCast.Services;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using LeafCast.Models.Data;
+using LeafCast.Services;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.Painting;
+using SkiaSharp;
 using System.Collections.ObjectModel;
 
 namespace LeafCast.ViewModels;

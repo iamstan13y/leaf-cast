@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
-using LeafCast.API.Models.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 

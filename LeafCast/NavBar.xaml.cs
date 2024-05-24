@@ -36,17 +36,7 @@ public partial class NavBar : ContentView
             bool answer = await Application.Current.MainPage.DisplayAlert("Exit", "Are you sure you want to exit the app?", "Yes", "No");
             if (answer)
             {
-              
-
-                // OR
-
-                // Terminate the process
-                 Environment.Exit(0);
-
-                // OR
-
-                // Call platform-specific code to exit the app
-                // DependencyService.Get<IExitAppService>().ExitApp();
+                Environment.Exit(0);
             }
 
         };

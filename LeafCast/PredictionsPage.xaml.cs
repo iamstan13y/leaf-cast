@@ -1,11 +1,4 @@
-using LiveChartsCore;
-using CommunityToolkit.Mvvm.ComponentModel;
-using LiveChartsCore.SkiaSharpView.Painting;
-using LiveChartsCore.SkiaSharpView;
-using SkiaSharp;
-using LeafCast.Services;
 using LeafCast.Models.Data;
-
 
 namespace LeafCast;
 
@@ -132,7 +125,7 @@ public partial class PredictionsPage : ContentPage
     public int SelectedYear { get; set; }
 
     public void YearPicker_SelectedIndexChanged(object sender, EventArgs e) => UpdatePredictedPrice();
-    
+
     private void UpdatePredictedPrice()
     {
         var prediction = Predictions.FirstOrDefault(p => p.Id == drpGrade.SelectedItem && p.Year == (int)drpYear.SelectedItem);
